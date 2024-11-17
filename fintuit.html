@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Logo and Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#home" onclick="showHome()">Home</a></li>
+            <li><a href="#about" onclick="showAbout()">About</a></li>
+            <li><a href="#services" onclick="showServices()">Services</a></li>
+            <li><a href="#contact" onclick="showContact()">Contact</a></li>
+        </ul>
+        <!-- Auth Buttons -->
+        <div class="auth-buttons">
+            <button class="sign-in-button" onclick="signIn()">Sign In</button>
+            <!-- Sign Up Button wrapped in <a> tag for navigation -->
+            <a href="signup.html">
+                <button class="sign-up-button">Sign Up</button>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header Text -->
+    <div class="header-text">
+        Fintuit - Clear, Reliable Insights for Every Investor.
+    </div>
+
+    <div class="center-container">
+        <!-- Logo Container -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+
+        <!-- Search Input Form with Magnifying Glass Button -->
+        <form class="search-form" onsubmit="return handleSearch(event)">
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search..." autocomplete="off">
+                <button type="submit" class="search-button">
+                    <!-- Magnifying Glass SVG Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="16" y1="16" x2="21" y2="21"></line>
+                    </svg>
+                </button>
+            </div>
+        </form>
+
+        <!-- Display Content -->
+        <div id="output" class="output-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
